@@ -2,42 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Task Card */
 .task-card {
-  @apply rounded-lg border p-4 shadow-sm hover:shadow-md transition-shadow duration-200;
+  @apply rounded-xl border p-5 shadow-sm hover:shadow-lg transition-shadow duration-200 ease-in-out transform hover:scale-[1.02];
 }
 
+/* Status-based Backgrounds */
 .task-card.pending {
-  @apply bg-yellow-50 border-yellow-200;
+  @apply bg-yellow-50 border-yellow-300;
 }
 
 .task-card.in-progress {
-  @apply bg-blue-50 border-blue-200;
+  @apply bg-blue-50 border-blue-300;
 }
 
 .task-card.completed {
-  @apply bg-green-50 border-green-200;
+  @apply bg-green-50 border-green-300;
 }
 
+/* Title */
 .task-card h3 {
-  @apply text-lg font-semibold text-gray-800 mb-2;
+  @apply text-lg font-bold text-gray-900 mb-2 tracking-wide;
 }
 
+/* Description */
 .task-card p {
-  @apply text-gray-600 mb-3;
+  @apply text-gray-700 leading-relaxed mb-3;
 }
 
+/* Status Badge */
 .task-card .status {
-  @apply inline-block px-2 py-1 rounded-full text-sm font-medium;
+  @apply inline-block px-3 py-1 rounded-full text-sm font-semibold shadow-sm;
 }
 
+/* Status-Specific Styles */
 .task-card.pending .status {
-  @apply text-yellow-600 bg-yellow-100;
+  @apply text-yellow-700 bg-yellow-200;
 }
 
 .task-card.in-progress .status {
-    @apply text-black bg-gray-200;
-  }
+  @apply text-gray-900 bg-gray-300;
+}
 
 .task-card.completed .status {
-  @apply text-green-600 bg-green-100;
+  @apply text-green-700 bg-green-200;
 }

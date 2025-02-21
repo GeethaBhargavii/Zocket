@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 .login-container {
-  @apply min-h-screen flex items-center justify-center bg-gray-50;
+  @apply min-h-screen flex items-center justify-center bg-gray-100;
 }
 
 .login-box {
-  @apply bg-white p-8 rounded-lg shadow-md w-full max-w-md;
+  @apply bg-white p-8 rounded-lg shadow-lg w-full max-w-md border border-gray-200;
 }
 
 .login-title {
-  @apply text-2xl font-bold text-gray-800 mb-4;
+  @apply text-3xl font-bold text-indigo-700 mb-4;
 }
 
 .login-subtitle {
-  @apply text-gray-600 mb-6;
+  @apply text-gray-500 mb-6;
 }
 
 .login-form {
@@ -23,17 +23,17 @@
 }
 
 .login-input {
-  @apply w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  @apply w-full p-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent;
 }
 
 .login-button {
-  @apply w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 font-semibold;
+  @apply w-full py-3 bg-gradient-to-r from-indigo-500 to-indigo-700 text-white rounded-md hover:from-indigo-600 hover:to-indigo-800 transition-all duration-300 font-semibold shadow-md;
 }
 
 .login-footer {
-  @apply mt-4 text-center text-gray-600;
+  @apply mt-4 text-center text-gray-500;
 }
 
 .signup-link {
-  @apply text-blue-600 hover:text-blue-800 cursor-pointer;
+  @apply text-indigo-600 hover:text-indigo-800 cursor-pointer font-medium;
 }

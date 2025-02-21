@@ -2,22 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Navbar */
 .navbar {
-  @apply flex items-center justify-between gap-4 p-6 bg-gray-800 text-white shadow-md sticky top-0 z-50;
+  @apply flex items-center justify-between p-5 bg-gray-900 text-white shadow-lg sticky top-0 z-50 w-full transition-all duration-300;
 }
 
+/* Logo */
 .navbar .logo h1 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-extrabold tracking-wide;
 }
 
+/* Navigation Links */
 .navbar .nav-links {
   @apply flex space-x-6;
 }
 
 .navbar .nav-links li {
-    @apply list-none text-lg;
+  @apply list-none;
 }
 
 .navbar .nav-links a {
-  @apply text-white hover:text-gray-300 transition-colors duration-200;
+  @apply text-white text-lg font-medium hover:text-gray-300 transition-colors duration-200;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navbar {
+    @apply flex-wrap justify-between px-4 py-3;
+  }
+
+  .navbar .nav-links {
+    @apply flex-col space-y-4 hidden;
+  }
+
+  .navbar .nav-links.show {
+    @apply flex;
+  }
 }
