@@ -18,7 +18,7 @@ const Login: React.FC = () => {
         </form>
 
         <p className="signup-footer">
-        Don't have an account?  
+        Do Not have an account?  
         <Link href="/login/signup" className="signup-link">Sign Up</Link>
       </p>
       </div>

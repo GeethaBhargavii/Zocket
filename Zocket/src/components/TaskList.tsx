@@ -5,6 +5,7 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import "./home.css";
 import { tasks, Task } from "@/lib/tasks"; // Import from the new file
+import { TooltipItem } from 'chart.js';
 
 // Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -61,7 +62,7 @@ const Home: React.FC = () => {
       },
       tooltip: {
         callbacks: {
-          label: (context: any) => `${context.label}: ${context.raw} tasks`,
+          label: (context: TooltipItem<"doughnut">) => `${context.label}: ${context.raw} tasks`,
         },
       },
     },
